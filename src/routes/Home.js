@@ -1,21 +1,23 @@
 import React from 'react';
-import { connect } from 'react-redux'
-import { makeStyles } from '@material-ui/styles';
+// import { makeStyles } from '@material-ui/styles';
 
 import Header from './../containers/Header'
+import ListForm from './../containers/ListForm'
 
-const useStyles = makeStyles({
+// const useStyles = makeStyles({
+// });
 
-});
+const Home = () => {
 
-const Home = (store) => {
+    // const classes = useStyles();
 
     return (
         <div>
             <Header />
+            <ListForm />
         </div>
 
     );
 }
 
-export default connect((store)=>{return store})(Home);
+export default Home;
