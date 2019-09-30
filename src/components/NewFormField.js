@@ -45,11 +45,9 @@ const useStyles = makeStyles({
 const NewFormField = props => {
 
   const {
-    elem,
+    elem: { type, fieldName, items, id },
     deleteField,
-    type,
     setType,
-    fieldName,
     setFieldName,
     addItemForDropdown,
     setNameForDropdown,
@@ -98,16 +96,16 @@ const NewFormField = props => {
           type === 'dropdown' &&
           <div className={classes.descriptionDropdown}>
             {
-              elem.items.map((dropItem, index ) => (
+              items.map((dropItem, index ) => (
                 <div className={classes.descriptionDropdownItem} key={index}>
                   <CheckBoxOutlineBlankIcon/>
                   <TextField
                     value={dropItem.name}
                     className={classes.inputDropdown}
-                    onChange={ event=> setNameForDropdown({index, value: event.target.value})}
+                    onChange={ event => setNameForDropdown({ id, index, value: event.target.value})}
                   />
                   <Button
-                    onClick={() => deleteItemForDropdown(dropItem, index)}
+                    onClick={() => deleteItemForDropdown({ index, id })}
                   >
                     <CloseIcon/>
                   </Button>
@@ -117,7 +115,7 @@ const NewFormField = props => {
             }
             <Button
               variant="contained"
-              onClick={() => addItemForDropdown(elem)}
+              onClick={() => addItemForDropdown(id)}
               className={classes.button}
             >
               <AddIcon/>
@@ -126,7 +124,33 @@ const NewFormField = props => {
         }
         {
           type === 'checkmark' &&
-          <p>checkmark</p>
+          <div className={classes.descriptionDropdown}>
+            {
+              items.map((dropItem, index ) => (
+                  <div className={classes.descriptionDropdownItem} key={index}>
+                    <CheckBoxOutlineBlankIcon/>
+                    <TextField
+                      value={dropItem.name}
+                      className={classes.inputDropdown}
+                      onChange={ event => setNameForDropdown({ id, index, value: event.target.value})}
+                    />
+                    <Button
+                      onClick={() => deleteItemForDropdown({ index, id })}
+                    >
+                      <CloseIcon/>
+                    </Button>
+                  </div>
+                )
+              )
+            }
+            <Button
+              variant="contained"
+              onClick={() => addItemForDropdown(id)}
+              className={classes.button}
+            >
+              <AddIcon/>
+            </Button>
+          </div>
         }
       </div>
     </>

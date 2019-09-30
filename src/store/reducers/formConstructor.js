@@ -1,4 +1,6 @@
 import { handleActions, createAction } from 'redux-actions';
+import axios from 'axios'
+import { API } from './../../constants'
 
 export const ADD_FIELD = 'ALL_FORMS/ADD_FIELD';
 export const DELETE_FIELD = 'ALL_FORMS/DELETE_FIELD';
@@ -20,7 +22,16 @@ export const addItemForDropdown = createAction(ADD_ITEM_FOR_DROPDOWN);
 export const deleteItemForDropdown = createAction(DELETE_ITEM_FOR_DROPDOWN);
 export const setNameForDropdown = createAction(SET_NAME_FOR_DROPDOWN);
 
-export const sendForm = () => async (dispatch) => {
+export const sendForm = name => async ( dispatch, getState) => {
+  console.log('getState', getState()[REDUCER_NAME])
+  console.log('formName', name)
+  axios.post(`${API}/forms/new`,{
+    name,
+    fields: getState()[REDUCER_NAME]
+  })
+  .then( response => {
+    console.log(response);
+  })
 };
 
 let fieldId = 0;
@@ -38,9 +49,9 @@ export default handleActions({
       state.filter(item => item.id !== payload)
   ),
   [setFieldType]: (state, { payload }) => {
-    if( payload.type !== 'dropdown'){
+    if( payload.type !== 'dropdown' && payload.type !== 'checkmark' ){
       return state.map( item =>
-        item.id === payload.id ? {...item, type: payload.type } : item
+        item.id === payload.id ? {...item, type: payload.type, placeholder: "" } : item
       )
     } else {
      return  state.map( item =>
@@ -59,7 +70,7 @@ export default handleActions({
   },
   [setFieldName]: (state, { payload }) => (
     state.map((item) =>
-      item.id === payload.id ? {...item, fieldName: payload.fieldName } : item
+      item.id === payload.id ? {...item, fieldName: payload.fieldName, placeholder: payload.fieldName } : item
     )
   ),
   [addItemForDropdown]: (state, { payload }) => (
@@ -72,30 +83,29 @@ export default handleActions({
     })
   ),
   [deleteItemForDropdown]: (state, { payload }) => (
-     state.map((fields) => {
-       console.log('payload', payload)
-       if(payload === fields.id){
-         const newArr = [...fields.items].filter((elem, index) => index !== payload);
-         return ({...fields, items: [...newArr]})
+     state.map((field) => {
+       if(field.id === payload.id){
+         const newArr = [...field.items].filter((elem, index) => index !== payload.index);
+         return ({...field, items: [...newArr]})
        } else {
-         return { ...fields }
+         return { ...field }
        }
-
      })
   ),
   [setNameForDropdown]: (state, { payload }) => (
-    state.map((fields) => {
-      if(fields.id === payload.id){
-        return fields
-      } else {
-        const newArr = [...fields.items];
-        newArr[payload.index].value = payload.value;
-        newArr[payload.index].name = payload.value;
-        return({ ...fields, items:[...newArr]})
-      }
-    })
+      state.map((field) => {
+        if(field.id === payload.id){
+          const newArr = [...field.items].map((elem, index) => (
+            index === payload.index
+              ? ({...elem, name: payload.value})
+              : {...elem})
+          );
+          return ({...field, items: [...newArr]})
+        } else {
+          return { ...field }
+        }
+      })
   ),
-
 }, initialState);
 
 

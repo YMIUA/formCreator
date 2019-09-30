@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { TextField , Button, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { connect } from "react-redux"
@@ -58,6 +58,9 @@ const NewFormConstructor = (props) => {
 
   const [formName, changeFormName] = useState("");
 
+  // useEffect()
+  //load Data then edit form
+  
   return (
     <div className={classes.container}>
       <TextField
@@ -68,24 +71,24 @@ const NewFormConstructor = (props) => {
         margin="normal"
       />
       <div className={classes.formsFields}>
-      {
-        formConstructorFields.map(elem => (
-          <Fragment key={elem.id}>
-            <NewFormField
-              elem={elem}
-              deleteField={() => deleteField(elem.id)}
-              setType={(type) => {
-                setFieldType({type, id:elem.id})
-              }}
-              setFieldName={ fieldName => setFieldName({fieldName, id:elem.id}) }
-              addItemForDropdown={addItemForDropdown}
-              setNameForDropdown={setNameForDropdown}
-              deleteItemForDropdown={deleteItemForDropdown}
-            />
-            <Divider/>
-          </Fragment>
-        ))
-      }
+        {
+          formConstructorFields.map(elem => (
+            <Fragment key={elem.id}>
+              <NewFormField
+                elem={elem}
+                deleteField={() => deleteField(elem.id)}
+                setType={(type) => {
+                  setFieldType({type, id:elem.id})
+                }}
+                setFieldName={ fieldName => setFieldName({fieldName, id:elem.id}) }
+                addItemForDropdown={addItemForDropdown}
+                setNameForDropdown={setNameForDropdown}
+                deleteItemForDropdown={deleteItemForDropdown}
+              />
+              <Divider/>
+            </Fragment>
+          ))
+        }
       </div>
       <Button
         variant="contained"

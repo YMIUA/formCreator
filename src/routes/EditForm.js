@@ -1,11 +1,16 @@
 import React from 'react';
-import { connect } from 'react-redux'
+import Header from './../containers/Header'
+import NewFormConstructor from '../containers/NewFormConstructor'
 
-const EditForm = (store) => {
+
+const NewForm = () => {
+
     return (
-        <p>Edit form</p>
-
+      <div>
+          <Header/>
+          <NewFormConstructor/>
+      </div>
     );
 }
 
-export default connect((store)=>{return store})(EditForm)
+export default NewForm

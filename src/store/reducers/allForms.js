@@ -1,5 +1,6 @@
 import { handleActions, createAction } from 'redux-actions';
 import axios from 'axios'
+import { API } from './../../constants'
 
 export const FORM_LOADED = 'ALL_FORMS/FORM_LOADED';
 export const CHANGE_LOAD_STATUS = 'ALL_FORMS/CHANGE_LOAD_STATUS';
@@ -19,7 +20,7 @@ const changeLoadStatus = createAction(CHANGE_LOAD_STATUS);
 
 export const getFormsData = () => async (dispatch) => {
   dispatch(changeLoadStatus(true));
-  axios('http://forms-app.brutgroot.com/shpax/forms/list')
+  axios( `${API}/forms/list`)
     .then(response => {
       dispatch(fetchFormsResponse(response.data))
       dispatch(setFormLoaded())

@@ -1,0 +1,1 @@
+export const API = 'http://forms-app.brutgroot.com/ymi';
