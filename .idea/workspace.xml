@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35377752-2dc2-43cd-a12c-95b78a0c9765" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/routes/FormConstructorPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NewFormField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewFormField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/NewFormConstructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/NewFormConstructor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/EditForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/EditForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/NewForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/NewForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/EditFormConstructor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/ListForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ListForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/NewFormConstructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/FormConstructor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/EditForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/NewForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/SeeAllForms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Fills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducers/allForms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/allForms.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducers/formConstructor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/formConstructor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,10 +30,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/EditForm.js">
+        <entry file="file://$PROJECT_DIR$/src/containers/FillsTable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="29" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="29" />
+            <state relative-caret-position="353">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/routes/Fills.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -34,12 +51,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/NewFormConstructor.js">
+        <entry file="file://$PROJECT_DIR$/src/containers/FillingForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="100" column="10" lean-forward="true" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/reducers/fillingForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-236">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
-                <element signature="e#0#50#0" expanded="true" />
+                <element signature="e#0#60#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/reducers/formConstructor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="64" column="13" lean-forward="true" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+            <state relative-caret-position="531">
+              <caret line="137" column="29" selection-start-line="137" selection-start-column="23" selection-end-line="137" selection-end-column="29" />
               <folding>
                 <element signature="e#0#60#0" expanded="true" />
               </folding>
@@ -57,11 +83,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/containers/EditFormConstructor.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="498">
+              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/FormConstructor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -70,24 +108,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/index.js">
+        <entry file="file://$PROJECT_DIR$/src/store/reducers/fills.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+            <state relative-caret-position="375">
+              <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/NewForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="10" lean-forward="true" selection-end-line="16" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#0#60#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,25 +130,43 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>APP</find>
-      <find>theme</find>
-      <find>STORE</find>
-      <find>getFormsData</find>
-      <find>SimpleTable</find>
-      <find>allForms</find>
-      <find>START</find>
-      <find>start</find>
-      <find>allFormsSelector</find>
-      <find>mapDispatcheToProps</find>
-      <find>connect</find>
-      <find>classes</find>
-      <find>console.log</find>
-      <find>add fi</find>
-      <find>dele</find>
-      <find>counter</find>
-      <find>addItemForDropdown</find>
-      <find>elem</find>
+      <find>NewForm</find>
+      <find>Form name</find>
+      <find>link</find>
+      <find>console.log(&quot;respo</find>
+      <find>rest</find>
+      <find>name&quot;</find>
+      <find>sac</find>
+      <find>name</find>
+      <find>ALL_FORMS</find>
+      <find>match</find>
+      <find>forms/list`</find>
+      <find>Header</find>
+      <find>isAddForm</find>
+      <find>ERROR</find>
+      <find>ALL_</find>
+      <find>FormConstructorPage</find>
+      <find>forms/</find>
+      <find>ERROR LOADING FORM</find>
+      <find>formId</find>
+      <find>saveLoadData</find>
+      <find>getForm</find>
+      <find>ListForm</find>
+      <find>send</find>
+      <find>Button</find>
+      <find>fields.map</find>
+      <find>margin</find>
+      <find>formName</find>
+      <find>setName</find>
+      <find>setLoadStatus</find>
+      <find>fills</find>
     </findStrings>
+    <replaceStrings>
+      <replace>sendNewForm</replace>
+      <replace>FormConstructor</replace>
+      <replace>FILLS</replace>
+      <replace>isShowLink</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
     </dirStrings>
@@ -137,7 +181,6 @@
         <option value="$PROJECT_DIR$/src/store/middleware.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/manageUserReducer.js" />
         <option value="$PROJECT_DIR$/src/store/index.js" />
-        <option value="$PROJECT_DIR$/src/routes/index.js" />
         <option value="$PROJECT_DIR$/src/containers/EditForm.js" />
         <option value="$PROJECT_DIR$/src/containers/SeeAllForms.js" />
         <option value="$PROJECT_DIR$/src/containers/Home.js" />
@@ -145,28 +188,46 @@
         <option value="$PROJECT_DIR$/src/components/ListForm.js" />
         <option value="$PROJECT_DIR$/src/components/TableHeader.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/containers/ListForm.js" />
-        <option value="$PROJECT_DIR$/src/routes/Home.js" />
         <option value="$PROJECT_DIR$/src/components/newFormField.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/formCOnstructor.js" />
-        <option value="$PROJECT_DIR$/src/store/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/containers/NewForm.js" />
         <option value="$PROJECT_DIR$/src/containers/NewFormContainer.js" />
         <option value="$PROJECT_DIR$/src/containers/Header.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/components/NewFormField.js" />
-        <option value="$PROJECT_DIR$/src/containers/NewFormConstructor.js" />
-        <option value="$PROJECT_DIR$/src/store/reducers/allForms.js" />
-        <option value="$PROJECT_DIR$/src/store/reducers/formConstructor.js" />
         <option value="$PROJECT_DIR$/src/constants.js" />
-        <option value="$PROJECT_DIR$/src/routes/NewForm.js" />
         <option value="$PROJECT_DIR$/src/routes/EditForm.js" />
+        <option value="$PROJECT_DIR$/src/components/NewFormField.js" />
         <option value="$PROJECT_DIR$/src/containers/EditFormConstructor.js" />
+        <option value="$PROJECT_DIR$/src/components/textInput.js" />
+        <option value="$PROJECT_DIR$/src/components/numberInput.js" />
+        <option value="$PROJECT_DIR$/src/components/dropdownInput.js" />
+        <option value="$PROJECT_DIR$/src/components/checkmarkInput.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/editForm.js" />
+        <option value="$PROJECT_DIR$/src/containers/NewFormConstructor.js" />
+        <option value="$PROJECT_DIR$/src/routes/NewForm.js" />
+        <option value="$PROJECT_DIR$/src/routes/FormConstructor.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/routes/index.js" />
+        <option value="$PROJECT_DIR$/src/containers/ListForm.js" />
+        <option value="$PROJECT_DIR$/src/routes/Fills.js" />
+        <option value="$PROJECT_DIR$/src/routes/Home.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/allForms.js" />
+        <option value="$PROJECT_DIR$/src/routes/FormConstructorPage.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/formName.js" />
+        <option value="$PROJECT_DIR$/src/routes/Form.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/fills.js" />
+        <option value="$PROJECT_DIR$/src/containers/FillsTable.js" />
+        <option value="$PROJECT_DIR$/src/containers/FillingForm.js" />
+        <option value="$PROJECT_DIR$/src/components/Header.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/fillingForm.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/formConstructor.js" />
+        <option value="$PROJECT_DIR$/src/containers/FormConstructor.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
+    <option name="x" value="726" />
+    <option name="width" value="714" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -187,6 +248,12 @@
               <item name="form" type="b2602c69:ProjectViewProjectNode" />
               <item name="form" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="form" type="b2602c69:ProjectViewProjectNode" />
@@ -229,10 +296,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/routes" />
     </key>
   </component>
@@ -269,12 +337,25 @@
       <workItem from="1569440516153" duration="993000" />
       <workItem from="1569516145310" duration="16743000" />
       <workItem from="1569769397068" duration="5511000" />
-      <workItem from="1569870131055" duration="7870000" />
+      <workItem from="1569870131055" duration="8074000" />
+      <workItem from="1569952619618" duration="10699000" />
+      <workItem from="1570074635462" duration="3072000" />
+      <workItem from="1570120640113" duration="11359000" />
+      <workItem from="1570362080861" duration="11844000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63997000" />
+    <option name="totallyTimeSpent" value="101175000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -290,10 +371,10 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32923833" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32923833" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32923833" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -310,10 +391,10 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32923833" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32923833" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32923833" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -353,37 +434,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -397,30 +451,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/allForms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/SeeAllForms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -433,48 +467,128 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/NewFormField.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="125" column="29" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/ListForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/components/dropdownInput.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/components/numberInput.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/NewForm.js">
+    <entry file="file://$PROJECT_DIR$/src/components/checkmarkInput.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/textInput.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/editForm.js" />
+    <entry file="file://$PROJECT_DIR$/src/routes/EditForm.js" />
+    <entry file="file://$PROJECT_DIR$/src/containers/EditFormConstructor.js" />
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="10" lean-forward="true" selection-end-line="16" />
+        <state relative-caret-position="135">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/EditForm.js">
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/formName.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/allForms.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/ListForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-168">
+          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/Home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="29" />
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/Form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/fills.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/FillsTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/FillingForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/fillingForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-236">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/FormConstructorPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="22" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -483,30 +597,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/reducers/formConstructor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="64" column="13" lean-forward="true" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+        <state relative-caret-position="531">
+          <caret line="137" column="29" selection-start-line="137" selection-start-column="23" selection-end-line="137" selection-end-column="29" />
           <folding>
             <element signature="e#0#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/NewFormConstructor.js">
+    <entry file="file://$PROJECT_DIR$/src/containers/FormConstructor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="100" column="10" lean-forward="true" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
+        <state relative-caret-position="500">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/EditFormConstructor.js">
+    <entry file="file://$PROJECT_DIR$/src/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="210">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="23" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/Fills.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

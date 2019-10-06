@@ -4,8 +4,7 @@ import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import AddIcon from '@material-ui/icons/Add';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import CloseIcon from '@material-ui/icons/Close';
-import { Radio, RadioGroup, FormControlLabel, FormLabel, Button, TextField, Select, MenuItem } from '@material-ui/core';
-import {deleteItemForDropdown} from "../store/reducers/formConstructor";
+import { Button, TextField, Select, MenuItem } from '@material-ui/core';
 
 const useStyles = makeStyles({
   container: {

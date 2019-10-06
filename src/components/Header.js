@@ -21,18 +21,35 @@ const useStyles = makeStyles({
   }
 });
 
-const Header = () => {
+const Header = ({ isShowLink, text }) => {
 
   const classes = useStyles();
 
   return (
     <div className={classes.wrapper}>
-      <Link to="/newForm">
-        <Button className={classes.button}>
-          <AddIcon/>
-        </Button>
-      </Link>
-      <p>Header</p>
+      {
+        isShowLink
+        ? (
+          <>
+            <Link to="/">
+              <Button className={classes.button}>
+                Home
+              </Button>
+            </Link>
+            <Link to="/newForm">
+              <Button className={classes.button}>
+                <AddIcon/>
+              </Button>
+            </Link>
+          </>
+        )
+        : null
+      }
+      {
+        text
+        ? <p>{text}</p>
+        : null
+      }
     </div>
   );
 };

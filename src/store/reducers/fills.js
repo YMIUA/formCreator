@@ -2,40 +2,41 @@ import { handleActions, createAction } from 'redux-actions';
 import axios from 'axios'
 import { API } from './../../constants'
 
-export const FORM_LOADED = 'ALL_FORMS/FORM_LOADED';
-export const CHANGE_LOAD_STATUS = 'ALL_FORMS/CHANGE_LOAD_STATUS';
-export const RESPONSE_FORMS = 'ALL_FORMS/RESPONSE_DATA';
+export const FORM_LOADED = 'FILLS/FORM_LOADED';
+export const CHANGE_LOAD_STATUS = 'FILLS/CHANGE_LOAD_STATUS';
+export const SAVE_FILLS = 'FILLS/SAVE_FILLS';
 
-export const REDUCER_NAME = 'allForms';
+export const REDUCER_NAME = 'fills';
 
 const initialState = {
   isLoaded: false,
   isLoading: false,
-  forms: [],
+  fills: [],
 };
 
 const setFormLoaded = createAction(FORM_LOADED);
-const fetchFormsResponse = createAction(RESPONSE_FORMS);
+const saveFills = createAction(SAVE_FILLS);
 const changeLoadStatus = createAction(CHANGE_LOAD_STATUS);
 
-export const getFormsData = () => async (dispatch) => {
+export const getFillsData = formId => async (dispatch) => {
   dispatch(changeLoadStatus(true));
-  axios( `${API}/forms/list`)
+  // axios.get( `${API}/fills/${formId}`)
+  axios.get( `http://forms-app.brutgroot.com/shpax/fills/1`)
     .then(response => {
-      dispatch(fetchFormsResponse(response.data));
+      dispatch(saveFills(response.data));
       dispatch(setFormLoaded())
     })
     .catch(() =>
-      console.log("ERROR LOAD DATA")
+      console.log("error load data")
     ).finally(()=>{
-      dispatch(changeLoadStatus(false))
+    dispatch(changeLoadStatus(false))
   })
 };
 
 export default handleActions({
-  [fetchFormsResponse]: (state, { payload }) => ({
+  [saveFills]: (state, { payload }) => ({
     ...state,
-    forms: payload
+    fills: payload
   }),
   [setFormLoaded]: state => ({
     ...state,
@@ -48,4 +49,4 @@ export default handleActions({
 }, initialState);
 
 
-export const allFormsSelector = state => state[REDUCER_NAME];
+export const fillsSelector = state => state[REDUCER_NAME];

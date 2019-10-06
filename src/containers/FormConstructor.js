@@ -1,7 +1,7 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { Fragment, useEffect} from 'react';
 import { TextField , Button, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { connect } from "react-redux"
+import { connect } from 'react-redux'
 import NewFormField from './../components/NewFormField';
 import {
   formConstructorSelector,
@@ -12,8 +12,14 @@ import {
   addItemForDropdown,
   setNameForDropdown,
   deleteItemForDropdown,
-  sendForm
-} from "../store/reducers/formConstructor";
+  sendNewForm,
+  sendFormUpdate,
+  getForm,
+  setFormData
+} from '../store/reducers/formConstructor';
+import { fillingFormSelector } from '../store/reducers/fillingForm'
+import { formNameSelector, setName } from '../store/reducers/formName'
+
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -40,7 +46,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const NewFormConstructor = (props) => {
+const FormConstructor = (props) => {
 
   const {
     formConstructorFields,
@@ -51,28 +57,45 @@ const NewFormConstructor = (props) => {
     addItemForDropdown,
     setNameForDropdown,
     deleteItemForDropdown,
-    sendForm
+    sendForm,
+    sendFormUpdate,
+    formId,
+    getForm,
+    setName,
+    name,
+    setFormData
   } = props;
 
   const classes = useStyles();
 
-  const [formName, changeFormName] = useState("");
+  useEffect(() => {
+    if(formId) {
+      getForm(formId)
+    } else {
+      setFormData({fields: []})
+      setName('')
+    }
+  }, [formId]);
 
-  // useEffect()
-  //load Data then edit form
-  
+  const send = () => {
+    formId
+      ? sendFormUpdate(name, formId)
+      : sendForm(name)
+  };
+
   return (
     <div className={classes.container}>
       <TextField
         label="Form name"
         className={classes.textField}
-        value={formName}
-        onChange={ event => changeFormName(event.target.value)}
+        value={name}
+        onChange={ event => setName(event.target.value)}
         margin="normal"
       />
       <div className={classes.formsFields}>
-        {
-          formConstructorFields.map(elem => (
+      {
+        formConstructorFields
+          ? formConstructorFields.map(elem => (
             <Fragment key={elem.id}>
               <NewFormField
                 elem={elem}
@@ -88,7 +111,8 @@ const NewFormConstructor = (props) => {
               <Divider/>
             </Fragment>
           ))
-        }
+          : null
+      }
       </div>
       <Button
         variant="contained"
@@ -104,7 +128,7 @@ const NewFormConstructor = (props) => {
             <Button
               variant="contained"
               className={classes.button}
-              onClick={() => sendForm(formName)}
+              onClick={send}
             >
               Send form
             </Button>
@@ -117,6 +141,8 @@ const NewFormConstructor = (props) => {
 
 const mapStateToProps = (store) => ({
   formConstructorFields: formConstructorSelector(store),
+  form: fillingFormSelector(store),
+  name: formNameSelector(store),
 });
 const mapDispatchToProps = ({
   addField,
@@ -126,7 +152,11 @@ const mapDispatchToProps = ({
   addItemForDropdown,
   setNameForDropdown,
   deleteItemForDropdown,
-  sendForm
+  sendNewForm,
+  sendFormUpdate,
+  getForm,
+  setName,
+  setFormData
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewFormConstructor)
+export default connect(mapStateToProps, mapDispatchToProps)(FormConstructor)
